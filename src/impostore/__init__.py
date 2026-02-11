@@ -20,30 +20,26 @@ def main() -> None:
     import pygame
     
     # per iniziare pygame (come per accedere alle funzioni presenti in pygame)
-    pygame.init()   
+    pygame.init()
 
-    # crea una finestra con il titolo "Impostore" che appare nella barra del titolo in alto
-    screen = pygame.display.set_mode((1000,800))
-    screen.fill("red")
+    screen = pygame.display.set_mode( (800, 600) )
+    pygame.display.set_caption("Il mio primo gioco con PyGame!")
 
-    pygame.display.set_caption("Impostore")
-
-    
     running = True
 
     while running:
-        # serve a gestire la X di chiusura in alto
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            # Se l'evento è la pressione di un tasto...
+            # ... e il tasto è il tasto ESC.. esc(i)!
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    running = False
 
-        # colora lo schermo di verde
-        screen.fill("red")
+    screen.fill("green")
+    pygame.display.flip()
 
-        # aggiorna il contenuto dello schermo
-        pygame.display.flip()
-
-    # Chiude pygame
     pygame.quit()
 
 
