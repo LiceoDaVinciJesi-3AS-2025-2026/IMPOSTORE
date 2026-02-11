@@ -18,10 +18,12 @@ def main() -> None:
     #========================================
 
     import pygame
-    pygame.init()
+    
+    # per iniziare pygame (come per accedere alle funzioni presenti in pygame)
+    pygame.init()   
 
     # crea una finestra con il titolo "Impostore" che appare nella barra del titolo in alto
-    screen = pygame.display.set_mode((800,600))
+    screen = pygame.display.set_mode((1000,800))
     screen.fill("red")
 
     pygame.display.set_caption("Impostore")
@@ -36,7 +38,7 @@ def main() -> None:
                 running = False
 
         # colora lo schermo di verde
-        screen.fill("green")
+        screen.fill("red")
 
         # aggiorna il contenuto dello schermo
         pygame.display.flip()
