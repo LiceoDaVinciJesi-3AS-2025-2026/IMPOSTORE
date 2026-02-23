@@ -11,7 +11,7 @@ def main() -> None:
     # INSERIMENTO DELLA PAROLA DI OGNI PARTECIPANTE 
     # voti partecipanti
 
-
+    
 
     #=====================================================================
     # IMPOSTAZIONE DEL CODICE --> variabili necessarie per tutto il codice
@@ -21,7 +21,7 @@ def main() -> None:
     
     # per iniziare pygame (come per accedere alle funzioni presenti in pygame)
     pygame.init()
-    
+            
     altezza_schermata = 800
     lunghezza_schermata = 800
     
