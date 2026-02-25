@@ -21,5 +21,25 @@ def votazioni():
 
     return lista_voti
 
+def contaVoti(lista_voti):
+    '''La funzione controlla la lista dei voti ed elimina il giocatore che ha ricevuto più voti'''
+
+    giocatore_da_eliminare = ""
+    massimo_voti = 0
+
+    for nome in lista_voti:
+        conteggio_attuale = lista_voti.count(nome)
+        
+        if conteggio_attuale >= massimo_voti:
+            massimo_voti = conteggio_attuale
+            giocatore_da_eliminare = nome
+
+    while giocatore_da_eliminare in lista_voti:
+        lista_voti.remove(giocatore_da_eliminare)
 
     
+    return lista_voti
+
+
+
+   
