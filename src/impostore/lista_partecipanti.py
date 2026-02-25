@@ -15,7 +15,9 @@ def listaPartecipanti():
 
 
     lista_partecipanti = []
-    lista_partecipanti.append(nomi) 
+    for i in range(numero_partecipanti):
+        nome = str(input("inserisci il tuo nome:"))
+        lista_partecipanti.append(nome)
 
     return lista_partecipanti
 
@@ -26,9 +28,9 @@ def paroleGioco():
 
     lista_parole_totali = [
     ["PONTE", "Comando", "Denti", "Sospeso"]
-    ["CARTA", "Identità", "Canta", "Riciclo"]
-    ["TESTA", "Serie", "Uovo", "Rantolo"]
-    ["MORTE", "Bianca", "Cigno", "Secca"]
+    ["CARTA", "Albero", "Fabriano", "Riciclo"]
+    ["TESTA", "Corpo", "Uovo", "Pensiero"]
+    ["MORTE", "Condanna", "Cigno", "Secca"]
     ["CAMPANA", "Vetro", "Morto", "Doppia"]
     ["COLLO", "Bottiglia", "Piede", "Cigno"]
     ["ORDINE", "Arrivo", "Architetti", "Pubblico"]
@@ -232,7 +234,7 @@ def paroleGioco():
 
 
 
-def impostore(nome:str):
+def impostore():
     '''La funzione sceglie l'impostore dalla lista dei nomi dei partecipanti'''
 
     while True:
@@ -240,11 +242,42 @@ def impostore(nome:str):
 
         if numero_impostori >=1 and numero_impostori <= 3:
             break
-
+        impostori = []
     
-    for numero in range(numero_impostori):
+    for x in range(numero_impostori):
         impostore = random.choice(lista_nomi)
+        impostori.append(impostore)
+
+    return impostori
     
+
+def ordineGiocatori():
+    '''La funzione stabilisce l'ordine con cui i giocatori inseriscono le parole'''
+
+    lista_nomi.shuffle()
+
+    return lista_nomi
+
+
+
+def parolaDaInserire():
+    '''La funzione fa inserire a ciascun giocatore una parola'''
+
+    lista_parole = []
+
+    for persona in range(lista_nomi):
+        parola = str(input("inserisci una parola:"))
+    
+        while True:
+            if parola == parola:
+                print("Questa parola è gia stata inserita da un altro giocatore")
+                parola = str(input("inserisci un'altra parola:"))
+    
+        lista_parole.append(parola)
+
+    return lista_parole
+
+
 
 
 
