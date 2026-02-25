@@ -26,7 +26,7 @@ def votazioni():
 def contaVoti(lista_voti):
     '''La funzione controlla la lista dei voti ed elimina il giocatore che ha ricevuto più voti'''
 
-    giocatore_da_eliminare = ""
+    giocatore_eliminato = " "
     massimo_voti = 0
     lista_eliminati = []
 
@@ -35,13 +35,9 @@ def contaVoti(lista_voti):
         
         if conteggio_attuale >= massimo_voti:
             massimo_voti = conteggio_attuale
-            giocatore_da_eliminare = nome
+            giocatore_eliminato = nome
+            lista_eliminati.append(nome)
 
-    while giocatore_da_eliminare in lista_voti:
-        lista_voti.remove(giocatore_da_eliminare)
-        lista_eliminati.append(giocatore_da_eliminare)
-
-    
     return lista_eliminati
 
 def controllaImpostori(lista_eliminati):
@@ -55,7 +51,7 @@ def controllaImpostori(lista_eliminati):
     
         lista_partecipanti.remove(nome)
 
-    return lista_partecipanti
+    return lista_partecipanti 
 
 
 
