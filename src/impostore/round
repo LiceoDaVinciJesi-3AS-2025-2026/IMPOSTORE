@@ -1,0 +1,20 @@
+from lista_partecipanti import impostore
+from votazione import contaVoti, controllaImpostori, votazioni
+
+
+def round():
+    '''La funzione permette di andare avanti con i round fino a quando non vengono eliminati tutti gli 
+    impostori o la lista dei partecipanti è composta sola da 2 giocatori'''
+
+    while len(impostore) > 0 and len(lista_partecipanti) > 2:
+        lista_voti = votazioni()
+        lista_eliminati = contaVoti(lista_voti)
+        lista_partecipanti = controllaImpostori(lista_eliminati)
+    
+    if len(impostore) == 0:
+        print("Hai vinto, hai eliminato tutti gli impostori")
+    else:
+        print("Hai perso, sono rimasti solo 2 giocatori e uno di loro è un impostore")  
+    
+
+ 

@@ -8,11 +8,6 @@ def listaPartecipanti():
 
         if numero_partecipanti >= 3 and numero_partecipanti <= 15:
             break
-    
-
-    for nomi in range(numero_partecipanti):
-        nomi = str(input("inserisci il tuo nome:"))
-
 
     lista_partecipanti = []
     for i in range(numero_partecipanti):
@@ -27,207 +22,248 @@ def paroleGioco():
     '''La funzione crea una lista contenente la parole del gioco'''
 
     lista_parole_totali = [
-    ["PONTE", "Comando", "Denti", "Sospeso"]
-    ["CARTA", "Albero", "Fabriano", "Riciclo"]
-    ["TESTA", "Corpo", "Uovo", "Pensiero"]
-    ["MORTE", "Condanna", "Cigno", "Secca"]
-    ["CAMPANA", "Vetro", "Morto", "Doppia"]
-    ["COLLO", "Bottiglia", "Piede", "Cigno"]
-    ["ORDINE", "Arrivo", "Architetti", "Pubblico"]
-    ["SCALA", "Quaranta", "Grigio", "Mercalli"]
-    ["BOCCA", "Cucita", "Fuoco", "Verità"]
-    ["FILO", "Arianna", "Rasoio", "Perle"]
-    ["GIRO", "Vite", "Boa", "Bussola"]
-    ["MORSO", "Freno", "Mela", "Rancore"]
-    ["PULCE", "Orecchio", "Mercato", "Salto"]
-    ["FONDO", "Cassa", "Schiena", "Magazzino"]
-    ["LANCIO", "Agenzia", "Disco", "Paracadute"]
-    ["SANGUE", "Freddo", "Blu", "Donazione"]
-    ["GELO", "Reale", "Cadere", "Rottura"]
-    ["VITA", "Stretta", "Mondana", "Smeraldo"]
-    ["PESO", "Specifico", "Piuma", "Morto"]
-    ["PUNTO", "Croce", "Rottura", "Interrogativo"]
-    ["FACCIA", "Bronzo", "Medaglia", "Tosta"]
-    ["CORPO", "Reato", "Guardia", "Ballo"]
-    ["CHIAVE", "Volta", "Inglese", "Violino"]
-    ["PASSO", "Carrabile", "Falso", "Gatto"]
-    ["OMBRA", "Governo", "Portata", "Zona"]
-    ["BOLLA", "Sapone", "Accompagnamento", "Speculativa"]
-    ["VOCE", "Capitolo", "Bianca", "Grosso"]
-    ["VENTO", "Rosa", "Favore", "Coda"]
-    ["GIOCO", "Forza", "Incastro", "Squadra"]
-    ["SALE", "Zucca", "Attico", "Integrale"]
-    ["CORDA", "Violino", "Pazzia", "Tesa"]
-    ["PEZZO", "Ricambio", "Novanta", "Unico"]
-    ["MANO", "Libera", "Morta", "Forchetta"]
-    ["QUADRO", "Clinico", "Svedese", "Autore"]
-    ["ARIA", "Condizionata", "Castello", "Fritta"]
-    ["LINEA", "Confine", "Cortesia", "Condotta"]
-    ["FERRO", "Cavallo", "Stiro", "Calza"]
-    ["CORTINA", "Ferro", "Fumo", "Ampezzo"]
-    ["PUNTA", "Diamante", "Piedi", "Stella"]
-    ["PANE", "Cassetta", "Amore", "Spezzato"]
-    ["LUME", "Ragione", "Candela", "Naso"]
-    ["CATENA", "Montaggio", "Alimentare", "Reazione"]
-    ["SCACCO", "Matto", "Re", "Tavoliere"]
-    ["SEGNO", "Zodiacale", "Croce", "Tempi"]
-    ["FIORE", "Occhiello", "Bach", "Pelle"]
-    ["MACCHINA", "Caffè", "Guerra", "Tempo"]
-    ["PIANO", "Terra", "Sequenza", "Inclinato"]
-    ["COLORE", "Bandiera", "Caldo", "Locale"]
-    ["CIRCOLO", "Vizioso", "Polare", "Artistico"]
-    ["GRADO", "Parentela", "Separazione", "Alcolico"]
-    ["COLPO", "Fulmine", "Spugna", "Sole"]
-    ["POLVERE", "Stelle", "Sparo", "Bagnata"]
-    ["FORZA", "Maggiore", "Natura", "Bruta"]
-    ["PAROLA", "Chiave", "Croce", "Onore"]
-    ["BANCO", "Prova", "Scuola", "Nebbia"]
-    ["STAGIONE", "Morta", "Saldi", "Sinfonia"]
-    ["CANALE", "Radice", "Scolo", "Social"]
-    ["PIANETA", "Rossone", "Nano", "Scimmie"]
-    ["VERO", "Cuoio", "Nome", "Falso"]
-    ["TAVOLO", "Verde", "Rotonda", "Trattativa"]
-    ["PALLA", "Prigioniera", "Balzo", "Neve"]
-    ["NERO", "Seppia", "Umore", "Cronaca"]
-    ["BIANCO", "Natale", "Bandiera", "Latte"]
-    ["ROSSO", "Sera", "Labbra", "Rabbia"]
-    ["VERDE", "Petrolio", "Speranza", "Pisello"]
-    ["NOTTE", "Bianca", "Piccola", "Brava"]
-    ["LUCE", "Posizione", "Riflessa", "Gas"]
-    ["BOTTONE", "Automatico", "Rosa", "Pancia"]
-    ["CAPO", "Espiatorio", "Stato", "Filo"]
-    ["PORTA", "Finestra", "Blindata", "Fortuna"]
-    ["VISTA", "Punti", "Corto", "Galleria"]
-    ["TAGLIO", "Freddo", "Cesareo", "Netto"]
-    ["BOTTA", "Risposta", "Calda", "Fortuna"]
-    ["BACIO", "Perugina", "Giuda", "Cinema"]
-    ["SOGNO", "Americano", "Precloro", "Cassetto"]
-    ["STELLA", "Cadente", "Alpina", "Michelin"]
-    ["CROCE", "Rossa", "Ferro", "Cavalletta"]
-    ["RETE", "Fognaria", "Social", "Letto"]
-    ["GOMMA", "Masticare", "Pane", "Bruciata"]
-    ["FUOCO", "Amico", "Paglia", "Artificio"]
-    ["ACQUA", "Passata", "Santa", "Rubinetto"]
-    ["TERRA", "Promessa", "Santa", "Ferma"]
-    ["VINO", "Tavola", "Rosso", "Messa"]
-    ["LUNA", "Storta", "Miele", "Parco"]
-    ["SOLE", "Nero", "Tramonto", "Colpo"]
-    ["MARCIA", "Reale", "Ingranaggio", "Funebre"]
-    ["CUORE", "Carciofo", "Pietra", "Spezzato"]
-    ["PELLE", "Oca", "Diavolo", "Fiore"]
-    ["SGUARDO", "Perso", "Intesa", "Orizzonte"]
-    ["SPALLA", "Forte", "Comprimario", "Cruda"]
-    ["PUNTA", "Piedi", "Stella", "Matita"]
-    ["COLLEGAMENTO", "Ipertestuale", "Diretta", "Ponte"]
-    ["VALORE", "Assoluto", "Mercato", "Bollato"]
-    ["CODA", "Paglia", "Pavone", "Occhio"]
-    ["CAMPO", "Minato", "Battaglia", "Fiori"]
-    ["BOTTE", "Ferro", "Piena", "Risposta"]
-    ["CASA", "Dolce", "Madre", "Bianca"]
-    ["GIORNO", "Giudizio", "Memoria", "Lavoro"]
-    ["LETTERA", "Morta", "Vettura", "Presentazione"]
-    ["LINGUA", "Lunga", "Morta", "Gatto"]
-    ["AZIONE", "Cattolica", "Legale", "Titolo"]
-    ["BASE", "Dati", "Militare", "Altezza"]
-    ["CACCIA", "Tesoro", "Strega", "Grossa"]
-    ["CALCIO", "Angolo", "Rigore", "Inizio"]
-    ["CAMERA", "Deputati", "Commercio", "Aria"]
-    ["CANTO", "Cigno", "Corale", "Libero"]
-    ["CAPITALE", "Umana", "Sociale", "Venture"]
-    ["CARICO", "Pendente", "Rottura", "Massimo"]
-    ["CASO", "Clinico", "Disperato", "Coscienza"]
-    ["CERCHIO", "Magico", "Bottiglia", "Fuoco"]
-    ["CERVELLO", "Fuga", "Gallina", "Elettronico"]
-    ["CHIAMATA", "Carico", "Imbarco", "Diretta"]
-    ["CHIESA", "Sconsacrata", "Madre", "Stato"]
-    ["CHILO", "Metro", "Grammmo", "Troppo"]
-    ["CICLO", "Vitale", "Mercato", "Breve"]
-    ["CINTURA", "Sicurezza", "Castità", "Nera"]
-    ["CLASSE", "Media", "Ferro", "Operaia"]
-    ["CLIENTE", "Abituale", "Fisso", "Sovrano"]
-    ["COGNOME", "Nome", "Arte", "Nubile"]
-    ["COLONNA", "Ercole", "Vertebrale", "Sonora"]
-    ["COMUNE", "Denominatore", "Senso", "Accordo"]
-    ["CONTO", "Corrente", "Rovescia", "Arancio"]
-    ["COPERTURA", "Nuvolosa", "Assicurativa", "Tetto"]
-    ["COPPIA", "Fissa", "Motrice", "Di fatto"]
-    ["CORRENTE", "Alternata", "Continua", "Aria"]
-    ["CORSA", "Armamenti", "Taxi", "Ostacoli"]
-    ["COSTO", "Opportunità", "Vita", "Beneficio"]
-    ["COSTRUZIONE", "Diretta", "Passiva", "Abusiva"]
-    ["CRISI", "Nervi", "Identità", "Economica"]
-    ["CULTURA", "Generale", "Fisica", "Popolare"]
-    ["CURVA", "Nord", "Gomito", "Apprendimento"]
-    ["DADO", "Tratto", "Brodo", "Gioco"]
-    ["DANNO", "Erariale", "Morale", "Collaterale"]
-    ["DATO", "Fatto", "Tratto", "Statistico"]
-    ["DEBITO", "Ossigeno", "Pubblico", "Riconoscenza"]
-    ["DECISIONE", "Arbitrale", "Presa", "Ultima"]
-    ["DELITTO", "Onore", "Perfetto", "Castigo"]
-    ["DESTINO", "Cinico", "Baro", "Segnato"]
-    ["DIFESA", "Ufficio", "Personale", "Oltranza"]
-    ["DIMENSIONE", "Ignota", "Terza", "Massima"]
-    ["DIRITTO", "Studio", "Autore", "Dovere"]
-    ["DISCORSO", "Diretto", "Corona", "Vuoto"]
-    ["DISEGNO", "Legge", "Libero", "Animato"]
-    ["DISTANZA", "Sicurezza", "Sociale", "Abissale"]
-    ["DIVISIONE", "Cellulare", "Meccanica", "Punto"]
-    ["DOLCE", "Attesa", "Vita", "Stilnovo"]
-    ["DOMANDA", "Offerta", "Retorica", "Risposta"]
-    ["DONNA", "Carriera", "Pulizie", "Schermo"]
-    ["DOPPIO", "Gioco", "Senso", "Taglio"]
-    ["DOVERE", "Cronaca", "Compiuto", "Piacere"]
-    ["ECCEZIONE", "Regola", "Sollevata", "Unica"]
-    ["EFFETTO", "Serra", "Domino", "Collaterale"]
-    ["ELEMENTO", "Disturbo", "Chimico", "Sorpresa"]
-    ["ERBA", "Gatta", "Voglio", "Cattiva"]
-    ["ERRORE", "Sistema", "Umano", "Stampa"]
-    ["ESAME", "Coscienza", "Riparazione", "Ammissione"]
-    ["ESPERIENZA", "Limite", "Diretta", "Campo"]
-    ["ESPRESSIONE", "Voto", "Viso", "Regolare"]
-    ["ESTRATTO", "Conto", "Nascita", "Erbe"]
-    ["ETÀ", "Oro", "Ferro", "Ragione"]
-    ["FATTO", "Compiuto", "Bene", "Cronaca"]
-    ["FEDE", "Nuziale", "Cieca", "Pubblica"]
-    ["FIGURA", "Merda", "Retorica", "Spicco"]
-    ["FILM", "Luce", "Orrore", "Muto"]
-    ["FILTRO", "Aria", "Amore", "Solare"]
-    ["FINALE", "Partita", "Ligure", "Sorpresa"]
-    ["FINE", "Settimana", "Corsa", "Mondo"]
-    ["FIRMA", "Digitale", "Calce", "Autore"]
-    ["FISSA", "Dimora", "Idea", "Posto"]
-    ["FIUME", "Parole", "Piena", "Carsico"]
-    ["FOGLIO", "Via", "Rosa", "Presenze"]
-    ["FOLLA", "Oceano", "Delirio", "Solitaria"]
-    ["FORMA", "Fisica", "Reato", "Piena"]
-    ["FORTUNA", "Cieca", "Sfacciata", "Mare"]
-    ["FORZA", "Vendita", "Bruta", "Gravità"]
-    ["FOSSA", "Comune", "Leone", "Marianne"]
-    ["FOTO", "Tessera", "Gruppo", "Finish"]
-    ["FRUTTO", "Bosco", "Stagione", "Peccato"]
-    ["FUGA", "Cervelli", "Gas", "Notizie"]
-    ["FUNZIONE", "Pubblica", "Rito", "dUso"]
-    ["FUTURO", "Prossimo", "Anteriore", "Remoto"]
-    ["GAMBA", "Legno", "Tesa", "Quarta"]
-    ["GARA", "Appalto", "Solidarietà", "Persa"]
-    ["GENERAZIONE", "Fenomeni", "Spontanea", "Futura"]
-    ["GENERE", "Umano", "Letterario", "Prima"]
-    ["GENTE", "Comune", "Mare", "Bene"]
-    ["GESTO", "Atletico", "Consulto", "Disperato"]
-    ["GIALLO", "Zafferano", "Paglierino", "Cronaca"]
-    ["GIARDINO", "Infanzia", "Segreto", "Pensile"]
-    ["GINOCCHIO", "Lavandaia", "Valgo", "Terra"]
-    ["GIOCATORE", "Azzardo", "Borsa", "Riserva"]
-    ["GIORNATA", "Porte aperte", "Storica", "Lavoro"]
-    ["GIOVANE", "Promessa", "Leone", "Dentro"]
-    ["GIUDICE", "Pace", "Gara", "Popolare"]
-    ["GIUDIZIO", "Universale", "Valore", "Direttissimo"]
-    ["GIUNTA", "Comunale", "Regionale", "Nuova"]
-    ["GIUSTIZIA", "Sommaria", "Privata", "Divina"]
-    ["GOLEADOR", "Bar", "Calcio", "centesimi"]
-    ["GOMMA", "Masticare", "Pane", "Ricambio"]
-    ["GOVERNO", "Tecnico", "Ombra", "Crisi"]]
-
+    ["astronauta", "ignoto"],
+    ["gatto", "mistero"],
+    ["pizza", "tondo"],
+    ["computer", "mente"],
+    ["fiume", "fluido"],
+    ["albero", "silenzio"],
+    ["sole", "calore"],
+    ["luna", "riflesso"],
+    ["mare", "infinito"],
+    ["montagna", "vetta"],
+    ["auto", "traccia"],
+    ["bicicletta", "ritmo"],
+    ["telefono", "eco"],
+    ["libro", "chiave"],
+    ["penna", "scivolo"],
+    ["cane", "fedeltà"],
+    ["uccello", "canto"],
+    ["fiore", "fragranza"],
+    ["cioccolato", "tentazione"],
+    ["tavolo", "radice"],
+    ["sedia", "riposo"],
+    ["occhiali", "limite"],
+    ["orologio", "tic"],
+    ["porta", "soglia"],
+    ["finestra", "respiro"],
+    ["mouse", "traccia"],
+    ["tastiera", "sequenza"],
+    ["lampada", "bagliore"],
+    ["specchio", "eco"],
+    ["scarpa", "passo"],
+    ["camicia", "pieghe"],
+    ["pantaloni", "corda"],
+    ["cappello", "ombra"],
+    ["ombrello", "goccia"],
+    ["zaino", "peso"],
+    ["chiave", "segreto"],
+    ["bicchiere", "trasparenza"],
+    ["piatto", "cerchio"],
+    ["coltello", "taglio"],
+    ["forchetta", "punti"],
+    ["cucchiaio", "rotondo"],
+    ["torta", "festa"],
+    ["gelato", "freddo"],
+    ["caffè", "aroma"],
+    ["tè", "foglia"],
+    ["latte", "bianco"],
+    ["pane", "crosta"],
+    ["formaggio", "stagione"],
+    ["burro", "morbido"],
+    ["uovo", "inizio"],
+    ["pesce", "scivolo"],
+    ["pollo", "allevato"],
+    ["maiale", "rosa"],
+    ["mucca", "mugolio"],
+    ["cavallo", "stella"],
+    ["elefante", "memoria"],
+    ["tigre", "strisce"],
+    ["leone", "ruggito"],
+    ["orso", "iberno"],
+    ["lupo", "notte"],
+    ["volpe", "astuzia"],
+    ["coniglio", "salto"],
+    ["cervo", "corna"],
+    ["scoiattolo", "noci"],
+    ["rana", "salto"],
+    ["serpente", "scivolo"],
+    ["ape", "alveare"],
+    ["farfalla", "metamorfosi"],
+    ["mosca", "fastidio"],
+    ["zanzara", "sangue"],
+    ["coccinella", "fortuna"],
+    ["spada", "acciaio"],
+    ["scudo", "protezione"],
+    ["elmo", "testa"],
+    ["armatura", "peso"],
+    ["cavaliere", "onore"],
+    ["castello", "torre"],
+    ["re", "sovrano"],
+    ["regina", "strategia"],
+    ["principe", "erede"],
+    ["principessa", "regale"],
+    ["drago", "fuoco"],
+    ["strega", "bastone"],
+    ["maghetto", "segreto"],
+    ["fantasma", "ombra"],
+    ["zombie", "camminata"],
+    ["vampiro", "notte"],
+    ["lupo mannaro", "luna"],
+    ["pirata", "tesoro"],
+    ["nave", "legno"],
+    ["barca", "acqua"],
+    ["sub", "profondità"],
+    ["pescatore", "canna"],
+    ["marinaio", "ancora"],
+    ["soldato", "ordine"],
+    ["poliziotto", "distretto"],
+    ["pompiere", "fiamma"],
+    ["medico", "cura"],
+    ["infermiere", "turno"],
+    ["professore", "cattedra"],
+    ["studente", "appunti"],
+    ["artista", "tela"],
+    ["musicista", "note"],
+    ["cantante", "voce"],
+    ["attore", "scena"],
+    ["regista", "ciak"],
+    ["scrittore", "inchiostro"],
+    ["poeta", "verso"],
+    ["fotografo", "scatto"],
+    ["ballerina", "passo"],
+    ["chef", "pentola"],
+    ["pasticcere", "glassa"],
+    ["cuoco", "padella"],
+    ["giardiniere", "terra"],
+    ["contadino", "seme"],
+    ["pilota", "quota"],
+    ["astronomo", "stelle"],
+    ["scienziato", "esperimento"],
+    ["ingegnere", "progetto"],
+    ["architetto", "modello"],
+    ["meccanico", "olio"],
+    ["idraulico", "tubo"],
+    ["elettricista", "circuito"],
+    ["programmatore", "debug"],
+    ["hacker", "sistema"],
+    ["robot", "movimento"],
+    ["drone", "volo"],
+    ["auto da corsa", "veloce"],
+    ["bicicletta da corsa", "strada"],
+    ["motocicletta", "corsa"],
+    ["camion", "carico"],
+    ["treno", "rotaia"],
+    ["metro", "sottosuolo"],
+    ["aereo", "decollare"],
+    ["elicottero", "rotore"],
+    ["razzo", "lancio"],
+    ["satellite", "orbita"],
+    ["astronave", "missione"],
+    ["stazione spaziale", "sospesa"],
+    ["pianeta", "terra"],
+    ["luna", "satellite"],
+    ["sole", "stella"],
+    ["galassia", "spirale"],
+    ["buco nero", "vuoto"],
+    ["cometa", "scia"],
+    ["asteroide", "corsia"],
+    ["cratere", "impatto"],
+    ["volcano", "eruzione"],
+    ["terremoto", "scossa"],
+    ["uragano", "vento"],
+    ["tornado", "vortice"],
+    ["tempesta", "tuono"],
+    ["neve", "bianco"],
+    ["ghiaccio", "rigido"],
+    ["lago", "specchio"],
+    ["oceano", "profondità"],
+    ["spiaggia", "sabbia"],
+    ["deserto", "silenzio"],
+    ["foresta", "ombra"],
+    ["giungla", "verde"],
+    ["collina", "pendio"],
+    ["valle", "ombra"],
+    ["isola", "isolata"],
+    ["penisola", "punta"],
+    ["città", "rumore"],
+    ["villaggio", "piccolo"],
+    ["paese", "popolazione"],
+    ["capitale", "trono"],
+    ["mercato", "bancarella"],
+    ["negozio", "vetrina"],
+    ["supermercato", "scaffale"],
+    ["ristorante", "piatti"],
+    ["bar", "chiacchiere"],
+    ["caffetteria", "tazza"],
+    ["biblioteca", "silenzio"],
+    ["scuola", "campanella"],
+    ["università", "lezione"],
+    ["ospedale", "cura"],
+    ["farmacia", "medicina"],
+    ["stazione", "treno"],
+    ["aeroporto", "attesa"],
+    ["porto", "ancora"],
+    ["parco", "gioco"],
+    ["giardino", "verde"],
+    ["palestra", "sudore"],
+    ["stadio", "tifo"],
+    ["cinema", "schermo"],
+    ["teatro", "sipario"],
+    ["museo", "arte"],
+    ["galleria", "quadri"],
+    ["monumento", "storia"],
+    ["chiesa", "silenzio"],
+    ["moschea", "preghiera"],
+    ["tempio", "santuario"],
+    ["sinagoga", "candela"],
+    ["pagoda", "legno"],
+    ["tenda", "campeggio"],
+    ["rifugio", "montagna"],
+    ["capanna", "legno"],
+    ["igloo", "ghiaccio"],
+    ["yacht", "acqua"],
+    ["canoa", "remo"],
+    ["kayak", "fiume"],
+    ["sci", "discesa"],
+    ["snowboard", "freddo"],
+    ["slittino", "pista"],
+    ["paracadute", "caduta"],
+    ["alianti", "vento"],
+    ["mongolfiera", "aria"],
+    ["aquilone", "volo"],
+    ["palloncino", "leggerezza"],
+    ["festa", "allegria"],
+    ["compleanno", "candela"],
+    ["matrimonio", "nozze"],
+    ["anniversario", "ricordo"],
+    ["vacanza", "fuga"],
+    ["viaggio", "valigia"],
+    ["esame", "ansia"],
+    ["interrogazione", "domanda"],
+    ["anna", "acqua"],
+    ["lavoro", "scrivania"],
+    ["ufficio", "documenti"],
+    ["azienda", "società"],
+    ["fabbrica", "produzione"],
+    ["strada", "asfalto"],
+    ["autostrada", "velocità"],
+    ["ponte", "collegamento"],
+    ["galleria", "tunnel"],
+    ["semaforo", "attesa"],
+    ["incrocio", "scelta"],
+    ["rotatoria", "cerchio"],
+    ["parcheggio", "auto"],
+    ["ascensore", "piano"],
+    ["scala", "gradino"],
+    ["muro", "barriera"],
+    ["recinzione", "confine"],
+    ["cancello", "ingresso"],
+    ["orto", "verdura"],
+    ["frutteto", "albero"],
+    ["vigna", "uva"],
+    ["piscina", "acqua"]
+    ]
     parola_scelta = random.choice(lista_parole_totali)
 
     return parola_scelta
@@ -249,6 +285,18 @@ def impostore():
         impostori.append(impostore)
 
     return impostori
+
+def distruibisciParole(lista_partecipanti, parola_scelta):
+    '''La funzione distribuisce le parole ai giocatori e agli impostori'''
+
+    parola_impostore = parola_scelta[1]
+    parola_giocatori = parola_scelta[0]
+
+    for nome in lista_partecipanti:
+        if nome in impostore:
+            print(nome, "la tua parola è:", parola_impostore)
+        else:
+            print(nome, "la tua parola è:", parola_giocatori)
     
 
 def ordineGiocatori():
