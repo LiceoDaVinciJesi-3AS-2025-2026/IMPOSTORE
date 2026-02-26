@@ -321,7 +321,7 @@ def parolaDaInserire():
                 print("Questa parola è gia stata inserita da un altro giocatore")
                 parola = str(input("inserisci un'altra parola:"))
     
-        lista_parole.append(parola)
+    lista_parole.append(parola)
 
     return lista_parole
 
