@@ -18,8 +18,3 @@ def round():
         print("Hai vinto, hai eliminato tutti gli impostori")
     else:
         print("Hai perso, sono rimasti solo 2 giocatori e uno di loro è un impostore")
-
-      
-    
-
- 
