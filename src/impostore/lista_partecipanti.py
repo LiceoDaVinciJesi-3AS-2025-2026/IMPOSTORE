@@ -286,7 +286,7 @@ def impostore():
 
     return impostori
 
-def distruibisciParole(lista_partecipanti, parola_scelta):
+def distribuisciParole(lista_partecipanti, parola_scelta):
     '''La funzione distribuisce le parole ai giocatori e agli impostori'''
 
     parola_impostore = parola_scelta[1]
