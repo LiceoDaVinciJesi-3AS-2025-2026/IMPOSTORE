@@ -20,7 +20,7 @@ def main() -> None:
     import pygame
     import sys
     
-    sfondo = 'sfondo.jpg'
+    
     
     #=====================================================================
     # IMPOSTAZIONE DEL CODICE --> preparazione schermata
@@ -33,6 +33,9 @@ def main() -> None:
     LARGHEZZA, ALTEZZA = 800, 600
     screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
     pygame.display.set_caption("Impostore")
+
+    sfondo = pygame.image.load("sfondo.jpg")
+    immagine_sfondo = pygame.transform.scale(sfondo,(LARGHEZZA,ALTEZZA))
 
     # Colori
     BG_COLOR = (15, 15, 30) # -->  blu notte molto scuro
@@ -72,7 +75,7 @@ def main() -> None:
 
     def draw_home():
         # colora lo schermo
-        screen.blit(sfondo, (0,0))
+        screen.blit(immagine_sfondo,(0,0) )
 
         # renderizza il titolo con il font che abbiamo definiti prima
         title = font_title.render("IMPOSTORE", True, TITLE_COLOR)
@@ -143,3 +146,5 @@ def main() -> None:
 
         clock.tick(60)
 
+if __name__ == "__main__":
+    main()
