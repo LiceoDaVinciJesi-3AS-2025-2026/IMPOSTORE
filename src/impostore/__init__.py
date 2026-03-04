@@ -16,18 +16,19 @@ def main() -> None:
 
     # Questa sezione di codice fa comparire sullo schermo una finestra che fa partire il gioco
     LARGHEZZA, ALTEZZA = 800, 600
-    screen = pygame.display.set_mode((LARGHEZZA, HEIGHT))
+    screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
     pygame.display.set_caption("Impostore")
 
     # Colori
-    BG_COLOR = (15, 15, 30)
-    TITLE_COLOR = (220, 50, 50)
-    BTN_COLOR = (40, 40, 80)
-    BTN_HOVER_COLOR = (70, 70, 130)
-    BTN_BORDER_COLOR = (100, 100, 200)
-    TEXT_COLOR = (255, 255, 255)
+    BG_COLOR = (15, 15, 30) # -->  blu notte molto scuro
+    TITLE_COLOR = (220, 50, 50) # --> rosso vivace/medio
+    BTN_COLOR = (40, 40, 80) # --> blu notte scuro
+    BTN_HOVER_COLOR = (70, 70, 130) # --> blu medio-scuro
+    BTN_BORDER_COLOR = (100, 100, 200) # --> blu elettrico soft
+    TEXT_COLOR = (255, 255, 255) # --> nero
 
     # Font del titolo e delle scritte
+    
     font_title = pygame.font.SysFont("Arial", 90, bold=True)
     font_btn = pygame.font.SysFont("Arial", 32)
 
