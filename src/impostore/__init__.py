@@ -20,6 +20,8 @@ def main() -> None:
     import pygame
     import sys
     
+    sfondo = 'sfondo.jpg'
+    
     #=====================================================================
     # IMPOSTAZIONE DEL CODICE --> preparazione schermata
     #=====================================================================    
@@ -70,7 +72,7 @@ def main() -> None:
 
     def draw_home():
         # colora lo schermo
-        screen.fill(BG_COLOR)
+        screen.blit(sfondo, (0,0))
 
         # renderizza il titolo con il font che abbiamo definiti prima
         title = font_title.render("IMPOSTORE", True, TITLE_COLOR)
