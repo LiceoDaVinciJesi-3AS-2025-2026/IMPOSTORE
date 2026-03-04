@@ -1,5 +1,18 @@
 def main() -> None:
 
+    #=======================================
+    # Divisione del codice 
+    # INSERIMENTO NOMI PARTECIPANTI --> in una lista
+    # PAROLE DEL GIOCO --> ['parole del gioco', 'indizi impostore(massimo tre)']
+    # INDIZI IMPOSTORE --> max tre
+    # NUMERO IMPOSTORI --> massimo tre
+    # SCELTA IMPOSTORI --> lista partecipanti con random.choice()
+    # ORDINE DEI GIOCATORI --> random.shuffle() 
+    # INSERIMENTO DELLA PAROLA DI OGNI PARTECIPANTE 
+    # voti partecipanti
+
+    
+
     #=====================================================================
     # IMPOSTAZIONE DEL CODICE --> librerie
     #=====================================================================

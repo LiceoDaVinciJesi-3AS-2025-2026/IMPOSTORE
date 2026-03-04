@@ -268,8 +268,6 @@ def paroleGioco():
 
     return parola_scelta
 
-
-
 def impostore():
     '''La funzione sceglie l'impostore dalla lista dei nomi dei partecipanti'''
 
@@ -305,8 +303,6 @@ def ordineGiocatori():
     lista_nomi.shuffle()
 
     return lista_nomi
-
-
 
 def parolaDaInserire():
     '''La funzione fa inserire a ciascun giocatore una parola'''

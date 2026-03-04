@@ -1,8 +1,11 @@
-from lista_partecipanti import distribuisciParole, impostore, listaPartecipanti, ordineGiocatori, parolaDaInserire, paroleGioco
+from lista_partecipanti import distruibisciParole, generaImpostori, listaPartecipanti, ordineGiocatori, parolaDaInserire, paroleGioco
 from votazione import contaVoti, controllaImpostori, votazioni
 
+impostore = []
 
 def round():
+    global impostore
+
     '''La funzione permette di andare avanti con i round, inserendo nuove parole sempre riferite
     a quella data all'inzio fino a quando non vengono eliminati tutti gli impostori o la 
     lista dei partecipanti è composta sola da 2 giocatori'''
@@ -20,15 +23,17 @@ def round():
         print("Hai perso, sono rimasti solo 2 giocatori e uno di loro è un impostore")
     
 def gioca():
-    '''La funzioe permette all'utente di giocare al gioco impostore'''
+    global impostore
+
+    '''La funzione permette all'utente di giocare al gioco impostore'''
     
     print("Benvenuto al gioco impostore, il tuo obiettivo è quello di eliminare tutti gli impostori presenti tra i partecipanti"
     "prima che rimangano solo 2 giocatori, uno dei quali è un impostore")
 
     lista_partecipanti = listaPartecipanti()
     parola_scelta = paroleGioco()
-    impostori = impostore()
-    distribuisci_parola = distribuisciParole(lista_partecipanti, parola_scelta)
+    impostore = generaImpostori()
+    distribuisci_parola = distruibisciParole(lista_partecipanti, parola_scelta, impostore)
     ordine = ordineGiocatori()
     lista_parole = parolaDaInserire()
     votazione = votazioni()
