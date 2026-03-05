@@ -3,24 +3,28 @@ import random
 def listaPartecipanti():
     '''La funzione crea una lista contentente i nomi dei partecipanti'''
 
+    #creo un ciclo infinito che permette di inserire un numero di partecipanti compreso tra 3 e 15 
+    #se il numero è fuori da questo range viene chiesto di inserirlo nuovamente
     while True:
         numero_partecipanti = int(input("inserisci il numero dei partecipanti:"))
 
         if numero_partecipanti >= 3 and numero_partecipanti <= 15:
             break
-
+    #creo una lista vuota
     lista_partecipanti = []
+    #creo un ciclo che permette di inserire i nomi dei partecipanti e li aggiunge alla lista dei partecipanti
     for i in range(numero_partecipanti):
         nome = str(input("inserisci il tuo nome:"))
         lista_partecipanti.append(nome)
 
     return lista_partecipanti
-
+#salvo la lista dei nomi dei partecipanti in una variabile globale per poterla utilizzare in altre funzioni
 lista_nomi = listaPartecipanti()
 
 def paroleGioco():
     '''La funzione crea una lista contenente la parole del gioco'''
 
+    #creo una lista unica di parole, ognuna composta da una parola per i giocatori e una parola per gli impostori
     lista_parole_totali = [
     ["astronauta", "pianeti"],
     ["gatto", "baffi"],
@@ -264,6 +268,7 @@ def paroleGioco():
     ["vigna", "uva"],
     ["piscina", "acqua"]
     ]
+    #scelgo una parola a caso dalla lista delle parole totali
     parola_scelta = random.choice(lista_parole_totali)
 
     return parola_scelta
@@ -271,13 +276,14 @@ def paroleGioco():
 def impostore():
     '''La funzione sceglie l'impostore dalla lista dei nomi dei partecipanti'''
 
+    #creo un ciclo infinito che permette di inserire un numero di impostori compreso tra 1 e 3
     while True:
         numero_impostori = int(input("inserisci il numero degli impostori:"))
 
         if numero_impostori >=1 and numero_impostori <= 3:
             break
         impostori = []
-    
+    #creo un ciclo che sceglie a caso un numero di impostori dalla lista dei nomi dei partecipanti e li aggiunge alla lista degli impostori
     for x in range(numero_impostori):
         impostore = random.choice(lista_nomi)
         impostori.append(impostore)
@@ -286,10 +292,11 @@ def impostore():
 
 def distribuisciParole(lista_partecipanti, parola_scelta):
     '''La funzione distribuisce le parole ai giocatori e agli impostori'''
-
+    #creo una variabile che contiene la parola per gli impostori e una variabile che contiene la parola per i giocatori
     parola_impostore = parola_scelta[1]
     parola_giocatori = parola_scelta[0]
 
+    #creo un ciclo che distribuisce la parola per gli impostori a tutti gli impostori e la parola per i giocatori a tutti i giocatori
     for nome in lista_partecipanti:
         if nome in impostore:
             print(nome, "la tua parola è:", parola_impostore)
@@ -300,6 +307,7 @@ def distribuisciParole(lista_partecipanti, parola_scelta):
 def ordineGiocatori():
     '''La funzione stabilisce l'ordine con cui i giocatori inseriscono le parole'''
 
+    #mescolo la lista dei nomi dei partecipanti per stabilire l'ordine con cui i giocatori inseriscono le parole
     lista_nomi.shuffle()
 
     return lista_nomi
@@ -307,11 +315,14 @@ def ordineGiocatori():
 def parolaDaInserire():
     '''La funzione fa inserire a ciascun giocatore una parola'''
 
+    #creo una lista vuota che conterrà le parole inserite dai giocatori#
     lista_parole = []
 
+    #creo un ciclo che permette a ciascun giocatore di inserire una parola e la aggiunge alla lista delle parole inserite dai giocatori
     for persona in range(lista_nomi):
         parola = str(input("inserisci una parola:"))
-    
+        #creo un ciclo infinito che permette di inserire una parola diversa da quella inserita dagli altri giocatori
+        #se la parola è già stata inserita viene chiesto di inserirne un'altra
         while True:
             if parola == parola:
                 print("Questa parola è gia stata inserita da un altro giocatore")
