@@ -535,7 +535,9 @@ def disegna_schermata_votazioni():
     # ===== COLONNA SINISTRA --> nome del giocatore che vota =====
 
     # rettangolo con il nome del giocatore corrente che deve votare
-    nome_votante = ordine_giocatori[indice_votante]
+    indice_sicuro = min(indice_votante, len(ordine_giocatori) - 1)
+    nome_votante = ordine_giocatori[indice_sicuro]
+    
     casella_votante = pygame.Rect(30, 155, 340, 65)
     pygame.draw.rect(schermata, COLORE_pulsante, casella_votante, border_radius=12)
     pygame.draw.rect(schermata, COLORE_pulsante_bordo, casella_votante, width=2, border_radius=12)
@@ -755,7 +757,9 @@ while True:
             elif schermata_attuale == "votazioni":
 
                 # click su un nome nella tendina --> aggiunge un voto a quel giocatore
-                nome_votante_corrente = ordine_giocatori[indice_votante]
+                indice_sicuro = min(indice_votante, len(ordine_giocatori) - 1)
+                nome_votante_corrente = ordine_giocatori[indice_sicuro]
+                
                 for casella, nome in rects_voto_votazioni:
                     # il giocatore non può votare se stesso
                     if casella.collidepoint(event.pos) and nome != nome_votante_corrente:

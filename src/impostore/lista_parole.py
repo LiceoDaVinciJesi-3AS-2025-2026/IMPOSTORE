@@ -8,7 +8,7 @@ def paroleGioco():
     #creo una lista unica di parole, ognuna composta da una parola per i giocatori e una parola per gli impostori
     lista_parole_totali = [ ["astronauta", "pianeti"],["gatto", "baffi"],["pizza", "legna"],["computer", "diamantini"],["fiume", "acqua"],["albero", "autunno"],
                             ["sole", "occhiali"],["luna", "riflesso"],["mare", "estate"],["montagna", "neve"],["auto", "gara"],["bicicletta", "pedoni"],
-                            ["telefono", "filo"],["libro", "scuola"],["penna", "pasta"],["cane", "padrone"],["uccello", "canto"]["fiore", "profumo"],
+                            ["telefono", "filo"],["libro", "scuola"],["penna", "pasta"],["cane", "padrone"],["uccello", "canto"],["fiore", "profumo"],
                             ["cioccolato", "tentazione"],["tavolo", "radice"],["sedia", "riposo"],["occhiali", "gradi"],["orologio", "tic"],
                             ["porta", "chiave"],["finestra", "vento"],["mouse", "indicatore"],["tastiera", "lettere"],["lampada", "casa"],["specchio", "eco"],
                             ["scarpa", "laccio"],["camicia", "bottoni"],["pantaloni", "cintura"],["cappello", "ombra"],["ombrello", "goccia"],["zaino", "peso"],
