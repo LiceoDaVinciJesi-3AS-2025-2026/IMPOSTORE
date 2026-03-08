@@ -6,6 +6,8 @@ import pygame
 import sys
 import random
 
+from lista_partecipanti import paroleGioco
+
 # richiama tutte le funzioni di pygame
 pygame.init()
 
@@ -110,7 +112,7 @@ def inizia_partita():
     nome_impostore = random.choice(ordine_giocatori)
     indice_giocatore_corrente = 0
     coperta_y = 0
-    coperta_trascinando = False
+    coperta_trascinando = False 
 
 
 #========================================================================
