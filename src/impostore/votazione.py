@@ -4,22 +4,19 @@ from lista_partecipanti import impostore
 lista_partecipanti = listaPartecipanti()
 impostori = impostore()
 
-def votazioni():
-    '''La funzione permette ai giocatori di decidere chi eliminare'''
-    #creo una lista vuota che conterrà i voti dei giocatori
+def votazioni(voti_inseriti):
+    '''La funzione raccoglie i voti dei giocatori per decidere chi eliminare'''
+
     lista_voti = []
-    #creo un ciclo che permette a ciascun giocatore di votare chi eliminare e aggiunge il voto alla lista dei voti
-    for giocatore in range(lista_partecipanti):
-        vota = str(input("inserisci il nome del giocatore da eliminare:"))
-        #creo un ciclo infinito che permette di inserire un nome presente tra i partecipanti
-        while True:
-            if vota not in lista_partecipanti:
-                print("Questo nome non è presente tra i partecipanti")
-                vota = str(input("inserisci il nome di un giocatore presente tra i partecipanti:"))
-            else:
-                break
-        #aggiungo il voto alla lista dei voti  
-        lista_voti.append(vota)
+
+    for giocatore in lista_partecipanti:
+        vota = voti_inseriti[giocatore]
+
+        # Controlla che il nome votato sia presente tra i partecipanti
+        if vota not in lista_partecipanti:
+            print(f"Il voto di {giocatore} non è valido: '{vota}' non è tra i partecipanti")
+        else:
+            lista_voti.append(vota)
 
     return lista_voti
 

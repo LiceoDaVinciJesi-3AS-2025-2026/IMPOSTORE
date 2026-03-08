@@ -273,17 +273,16 @@ def paroleGioco():
 
     return parola_scelta
 
-def impostore():
-    '''La funzione sceglie l'impostore dalla lista dei nomi dei partecipanti'''
+def impostore(lista_nomi, numero_impostori=1):
+    '''La funzione sceglie gli impostori dalla lista dei nomi dei partecipanti'''
 
-    #creo un ciclo infinito che permette di inserire un numero di impostori compreso tra 1 e 3
-    while True:
-        numero_impostori = int(input("inserisci il numero degli impostori:"))
+    # Validazione del numero di impostori
+    if not (1 <= numero_impostori <= 3):
+        raise ValueError("Il numero di impostori deve essere compreso tra 1 e 3")
 
-        if numero_impostori >=1 and numero_impostori <= 3:
-            break
-        impostori = []
-    #creo un ciclo che sceglie a caso un numero di impostori dalla lista dei nomi dei partecipanti e li aggiunge alla lista degli impostori
+    impostori = []
+
+    # Sceglie a caso gli impostori dalla lista dei partecipanti
     for x in range(numero_impostori):
         impostore = random.choice(lista_nomi)
         impostori.append(impostore)
@@ -312,23 +311,20 @@ def ordineGiocatori():
 
     return lista_nomi
 
-def parolaDaInserire():
-    '''La funzione fa inserire a ciascun giocatore una parola'''
+def parolaDaInserire(lista_parole_inserite):
+    '''La funzione raccoglie una parola per ciascun giocatore'''
 
-    #creo una lista vuota che conterrà le parole inserite dai giocatori#
     lista_parole = []
 
-    #creo un ciclo che permette a ciascun giocatore di inserire una parola e la aggiunge alla lista delle parole inserite dai giocatori
-    for persona in range(lista_nomi):
-        parola = str(input("inserisci una parola:"))
-        #creo un ciclo infinito che permette di inserire una parola diversa da quella inserita dagli altri giocatori
-        #se la parola è già stata inserita viene chiesto di inserirne un'altra
-        while True:
-            if parola == parola:
-                print("Questa parola è gia stata inserita da un altro giocatore")
-                parola = str(input("inserisci un'altra parola:"))
-    
-    lista_parole.append(parola)
+    # Per ogni giocatore aggiunge la sua parola alla lista
+    for persona in lista_nomi:
+        parola = lista_parole_inserite[persona]
+
+        # Controlla che la parola non sia già stata inserita da un altro giocatore
+        if parola in lista_parole:
+            print(f"{persona} ha inserito una parola già presente, verrà ignorata")
+        else:
+            lista_parole.append(parola)
 
     return lista_parole
 
