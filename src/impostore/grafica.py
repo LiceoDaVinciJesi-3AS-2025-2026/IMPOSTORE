@@ -6,7 +6,7 @@ import pygame
 import sys
 import random
 
-from lista_partecipanti import paroleGioco
+
 
 # richiama tutte le funzioni di pygame
 pygame.init()
