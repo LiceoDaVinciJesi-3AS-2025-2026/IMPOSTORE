@@ -2,17 +2,16 @@
 # FILE GESTIONE GRAFICA --> funzioni per visualizzare il gioco
 #========================================================================
 
-import pygame
-import sys
+# librerie standard 
 import random
 
-# la lista parole viene importata dal file esterno lista_parole.py
-# se la funzione si chiama diversamente, cambia 'paroleGioco' con il nome corretto
-try:
-    import lista_parole
-    USA_FILE_PAROLE = True
-except ImportError:
-    USA_FILE_PAROLE = False
+# librerie pip 
+import pygame
+import sys
+
+# moduli del mio package
+from impostore.lista_parole import paroleGioco
+from impostore.resources import get_image
 
 # richiama tutte le funzioni di pygame
 pygame.init()
@@ -44,12 +43,14 @@ LARGHEZZA, ALTEZZA = 800, 600
 schermata = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
 pygame.display.set_caption('IMPOSTORE')
 
-# adattamento dello sfondo
-sfondo = pygame.image.load("sfondo_ridimensionato.jpg")
-immagine_sfondo = pygame.transform.scale(sfondo, (LARGHEZZA, ALTEZZA))
 
-foto_originale = pygame.image.load("RondoDaSosa_2.jpg")
-foto = pygame.transform.scale(foto_originale, (280, 280))
+from .resources import *
+
+sfondo = pygame.image.load(get_image("sfondo_ridimensionato.jpg"))
+foto_rondo = pygame.image.load(get_image("RondoDaSosa_2.jpg"))
+
+immagine_sfondo = pygame.transform.scale(sfondo, (LARGHEZZA, ALTEZZA))
+foto = pygame.transform.scale(foto_rondo, (280, 280))
 
 # posizione e forma dei pulsanti nella finestra
 PULSANTE_larghezza, PULSANTE_altezza = 300, 70
@@ -86,21 +87,6 @@ giocatori_eliminati = []            # lista dei giocatori eliminati durante la p
 
 
 #========================================================================
-# LISTA PAROLE DI RISERVA --> usata se lista_parole.py non è disponibile
-# ogni elemento è una lista di due parole:
-#   - [0] --> parola per i giocatori normali
-#   - [1] --> indizio per l'impostore
-#========================================================================
-
-lista_parole_riserva = [
-    ["astronauta", "pianeti"], ["gatto", "baffi"], ["pizza", "legna"],
-    ["computer", "diamantini"], ["fiume", "acqua"], ["albero", "autunno"],
-    ["sole", "occhiali"], ["luna", "riflesso"], ["mare", "estate"],
-    ["montagna", "neve"], ["auto", "gara"], ["telefono", "filo"],
-]
-
-
-#========================================================================
 # FUNZIONI --> generazione dei pulsanti
 #========================================================================
 
@@ -132,7 +118,6 @@ def disegna_pulsanti(forma, testo, sovrapposizione_mouse):
 #========================================================================
 
 def inizia_partita():
-
     # dichiara che le variabili che verranno modificate sono quelle globali dichiarate in cima al file, non copie locali
     global ordine_giocatori, indice_giocatore_corrente
     global nomi_impostori, coperta_y, coperta_trascinando
@@ -170,10 +155,8 @@ def inizia_partita():
     # sceglie una coppia di parole a caso
     # coppia[0] --> parola per i giocatori normali
     # coppia[1] --> indizio per l'impostore
-    if USA_FILE_PAROLE:
-        lista = lista_parole.paroleGioco()
-    else:
-        lista = lista_parole_riserva
+    lista = paroleGioco()
+
     coppia = random.choice(lista)
     parola_partita = coppia[0]
     parola_indizio = coppia[1]
@@ -214,14 +197,11 @@ def nuovo_round():
     voti = {nome: 0 for nome in ordine_giocatori}
 
     # sceglie una nuova coppia di parole
-    if USA_FILE_PAROLE:
-        lista = lista_parole.paroleGioco()
-    else:
-        lista = lista_parole_riserva
+    lista = paroleGioco()
+
     coppia = random.choice(lista)
     parola_partita = coppia[0]
     parola_indizio = coppia[1]
-
 
 #========================================================================
 # FUNZIONI --> generazione delle finestre
@@ -258,11 +238,13 @@ def disegna_finestra_impostazioni():
     schermata.blit(sfondo, (0, 0))
 
     # genera il testo e lo centra rispetto a tutta la schermata
-    messaggio_impostazioni = FONT_testo.render("Qui ci saranno le impostazioni...", True, COLORE_testo)
+    testo = "Ogni giocatore deve dire una parola riferita a quella data all'inizio. Trova chi sta mentendo!"
+    messaggio_impostazioni = FONT_testo.render(testo, True, COLORE_testo)
     schermata.blit(messaggio_impostazioni, messaggio_impostazioni.get_rect(center=(LARGHEZZA // 2, ALTEZZA // 2)))
 
     # aggiorna la schermata
     pygame.display.flip()
+
 
 
 def disegna_schermata_inizio_partita():
