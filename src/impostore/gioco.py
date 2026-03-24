@@ -1,16 +1,18 @@
 # Descrizione del file `gioco.py`
 
-Il file `gioco.py` è il cuore del gioco **Impostore**.  
-Contiene tutte le parti principali che permettono al gioco di funzionare correttamente:
+# Il file `gioco.py` è il cuore del gioco **Impostore**.  
+# Contiene tutte le parti principali che permettono al gioco di funzionare correttamente:
+# 
+# - **Ciclo di gioco (game loop)**: mantiene il gioco attivo aggiornando lo stato e gestendo le azioni dei giocatori.  
+# - **Aggiornamento (updating)**: aggiorna i personaggi, le missioni e gli eventi del gioco.  
+# - **Disegno (rendering)**: mostra sullo schermo personaggi, ambienti, interfacce e animazioni.  
+# - **Gestione input**: riceve comandi da tastiera e mouse per far interagire il giocatore con il gioco.  
+# - **Logica di gioco (game logic)**: regole del gioco, comportamenti dell'impostore, azioni dei giocatori e condizioni di vittoria o sconfitta.  
+# - **Grafica**: gestisce sprite, animazioni ed effetti visivi per rendere il gioco più realistico e divertente.
+# 
+# In breve, `gioco.py` coordina tutte le parti del gioco, facendo sì che **Impostore** sia completo, interattivo e pronto da giocare.
 
-- **Ciclo di gioco (game loop)**: mantiene il gioco attivo aggiornando lo stato e gestendo le azioni dei giocatori.  
-- **Aggiornamento (updating)**: aggiorna i personaggi, le missioni e gli eventi del gioco.  
-- **Disegno (rendering)**: mostra sullo schermo personaggi, ambienti, interfacce e animazioni.  
-- **Gestione input**: riceve comandi da tastiera e mouse per far interagire il giocatore con il gioco.  
-- **Logica di gioco (game logic)**: regole del gioco, comportamenti dell'impostore, azioni dei giocatori e condizioni di vittoria o sconfitta.  
-- **Grafica**: gestisce sprite, animazioni ed effetti visivi per rendere il gioco più realistico e divertente.
-
-In breve, `gioco.py` coordina tutte le parti del gioco, facendo sì che **Impostore** sia completo, interattivo e pronto da giocare.#========================================================================
+#========================================================================
 # FILE GESTIONE GRAFICA --> funzioni per visualizzare il gioco
 #========================================================================
 
