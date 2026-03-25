@@ -1,6 +1,5 @@
-# Descrizione del file `gioco.py`
-
-# Il file `gioco.py` è il cuore del gioco **Impostore**.  
+# gioco.py -  Il file `gioco.py` è il cuore del gioco **Impostore**
+#
 # Contiene tutte le parti principali che permettono al gioco di funzionare correttamente:
 # 
 # - **Ciclo di gioco (game loop)**: mantiene il gioco attivo aggiornando lo stato e gestendo le azioni dei giocatori.  
@@ -11,6 +10,13 @@
 # - **Grafica**: gestisce sprite, animazioni ed effetti visivi per rendere il gioco più realistico e divertente.
 # 
 # In breve, `gioco.py` coordina tutte le parti del gioco, facendo sì che **Impostore** sia completo, interattivo e pronto da giocare.
+#
+# License: See LICENSE file in the project root for details.
+#
+# Authors: 
+# Tommaso Palmucci <palmuccitommy09.gm@gmail.com>
+# Francesco Papalini <francescopapalini5@gmail.com>
+
 
 #========================================================================
 # FILE GESTIONE GRAFICA --> funzioni per visualizzare il gioco

@@ -44,9 +44,9 @@ Il progetto è stato sviluppato collaborando tra i membri del gruppo, suddividen
 
 - Francesco Papalini ha contribuito alla struttura del progetto e alla gestione delle interazioni tra i giocatori e alla grafica del gioco presente nelle varie schermate.
 
-- L'immagine utilizzata nella schermata iniziale del gioco README è stata ricavata da Pinterest.
+- L'immagine utilizzata nella schermata iniziale del gioco README è stata ricavata da Pinterest(RubyLeyva).
 
-- L'immagine utilizzata nella schermata di gioco è stata presa da Google Chrome.
+- L'immagine utilizzata nella schermata di gioco è stata presa da Pinterest(xoxofr4ncesca).
 
 - La lista delle parole è stata generata tramite intelligenza artificiale (Claude) e successivamente migliorata e adattata da entrambi gli autori.
 
