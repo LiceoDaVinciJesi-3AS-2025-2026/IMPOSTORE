@@ -11,7 +11,7 @@
 # 
 # In breve, `gioco.py` coordina tutte le parti del gioco, facendo sì che **Impostore** sia completo, interattivo e pronto da giocare.
 #
-# License: See LICENSE file in the project root for details.
+# License: La licenza GNU GPL (General Public License)
 #
 # Authors: 
 # Tommaso Palmucci <palmuccitommy09.gm@gmail.com>
