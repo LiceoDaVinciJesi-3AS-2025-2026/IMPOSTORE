@@ -4,7 +4,10 @@
 
 def paroleGioco():
     '''La funzione crea una lista contenente la parole del gioco'''
-    
+
+    # PROF: la funzione non crea niente. La lista l'avete creata voi...
+    # PROF: almeno potevate scrivere le parole su un file, che all'inizio del gioco caricavate su una lista.
+
     #creo una lista unica di parole, ognuna composta da una parola per i giocatori e una parola per gli impostori
     lista_parole_totali = [ ["astronauta", "pianeti"],["gatto", "baffi"],["pizza", "legna"],["computer", "diamantini"],["fiume", "acqua"],["albero", "autunno"],
                             ["sole", "occhiali"],["luna", "riflesso"],["mare", "estate"],["montagna", "neve"],["auto", "gara"],["bicicletta", "pedoni"],
@@ -51,7 +54,5 @@ def paroleGioco():
                             ["semaforo", "attesa"],["incrocio", "scelta"],["rotatoria", "cerchio"],["parcheggio", "auto"],["ascensore", "piano"],
                             ["scala", "gradino"],["muro", "barriera"],["recinzione", "confine"],["cancello", "ingresso"],["orto", "verdura"],["frutteto", "albero"],
                             ["vigna", "uva"],["piscina", "acqua"] ]
-    
+
     return lista_parole_totali
-
-
