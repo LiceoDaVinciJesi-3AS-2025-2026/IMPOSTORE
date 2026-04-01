@@ -19,3 +19,8 @@ build-backend = "uv_build"
 members = [
     "impostore",
 ]
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.19.0",
+]
